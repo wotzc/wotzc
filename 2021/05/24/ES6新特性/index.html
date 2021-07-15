@@ -32,7 +32,7 @@
 <meta property="og:description" content="ECMAScript 6.0（以下简称ES6，ECMAScript 是一种由Ecma 国际(前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association)通过ECMA-262 标准化的脚本程序设计语言是JavaScript 语言的下一代标准，已经在2015 年6 月正式发布了，并且从ECMAScript 6 开始，开始采用年号来做版本">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-24T01:18:28.000Z">
-<meta property="article:modified_time" content="2021-07-06T02:21:22.054Z">
+<meta property="article:modified_time" content="2021-07-15T02:09:14.648Z">
 <meta property="article:author" content="wotzc">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="前端">
@@ -216,7 +216,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-let%E5%92%8Cvar%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">1.</span> <span class="nav-text">1.let和var的作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E8%A7%A3%E6%9E%84%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">2.解构表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95"><span class="nav-number">3.</span> <span class="nav-text">3.字符串扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6-%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95%E4%BA%86%E5%87%A0%E4%B8%AA%E6%96%B0%E7%9A%84API%EF%BC%9A"><span class="nav-number">3.0.1.</span> <span class="nav-text">ES6 为字符串扩展了几个新的API：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%87%BD%E6%95%B0%E4%BC%98%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">4.函数优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%AF%B9%E8%B1%A1%E4%BC%98%E5%8C%96"><span class="nav-number">5.</span> <span class="nav-text">5.对象优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-map-%E5%92%8Creduce"><span class="nav-number">6.</span> <span class="nav-text">5.map 和reduce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Promise"><span class="nav-number">7.</span> <span class="nav-text">6.Promise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="nav-number">8.</span> <span class="nav-text">7.模块化</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#let%E5%92%8Cvar%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">1.</span> <span class="nav-text">let和var的作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E6%9E%84%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">解构表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95"><span class="nav-number">3.</span> <span class="nav-text">字符串扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6-%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%89%A9%E5%B1%95%E4%BA%86%E5%87%A0%E4%B8%AA%E6%96%B0%E7%9A%84API%EF%BC%9A"><span class="nav-number">3.0.1.</span> <span class="nav-text">ES6 为字符串扩展了几个新的API：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E4%BC%98%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">函数优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%AF%B9%E8%B1%A1%E4%BC%98%E5%8C%96"><span class="nav-number">5.</span> <span class="nav-text">5.对象优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-%E5%92%8Creduce"><span class="nav-number">6.</span> <span class="nav-text">map 和reduce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise"><span class="nav-number">7.</span> <span class="nav-text">Promise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="nav-number">8.</span> <span class="nav-text">模块化</span></a></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -317,7 +317,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-06 10:21:22" itemprop="dateModified" datetime="2021-07-06T10:21:22+08:00">2021-07-06</time>
+        <time title="修改时间：2021-07-15 10:09:14" itemprop="dateModified" datetime="2021-07-15T10:09:14+08:00">2021-07-15</time>
       </span>
 
   
@@ -331,7 +331,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>ECMAScript 6.0（以下简称ES6，ECMAScript 是一种由Ecma 国际(前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association)通过ECMA-262 标准化的脚本程序设计语言是JavaScript 语言的下一代标准，已经在2015 年6 月正式发布了，并且从ECMAScript 6 开始，开始采用年号来做版本。即ECMAScript 2015，就是ECMAScript6。它的目标，是使得JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。每年一个新版本。</p>
-<h2 id="1-let和var的作用域"><a href="#1-let和var的作用域" class="headerlink" title="1.let和var的作用域"></a>1.let和var的作用域</h2><ul>
+<h2 id="let和var的作用域"><a href="#let和var的作用域" class="headerlink" title="let和var的作用域"></a>let和var的作用域</h2><ul>
 <li><p>var 声明的变量往往会越域,let 声明的变量有严格局部作用域</p>
 </li>
 <li><p>var 可以声明多次,let 只能声明一次</p>
@@ -345,7 +345,7 @@
 
 </li>
 </ul>
-<h2 id="2-解构表达式"><a href="#2-解构表达式" class="headerlink" title="2.解构表达式"></a>2.解构表达式</h2><ol>
+<h2 id="解构表达式"><a href="#解构表达式" class="headerlink" title="解构表达式"></a>解构表达式</h2><ol>
 <li><p><strong>数组解构</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const [x,y,z] &#x3D; arr;&#x2F;&#x2F; x，y，z 将与arr 中的每个位置对应来取值</span><br><span class="line">&#x2F;&#x2F; 然后打印</span><br><span class="line">console.log(x,y,z);</span><br></pre></td></tr></table></figure>
 </li>
@@ -354,7 +354,7 @@
 
 </li>
 </ol>
-<h2 id="3-字符串扩展"><a href="#3-字符串扩展" class="headerlink" title="3.字符串扩展"></a>3.字符串扩展</h2><ol>
+<h2 id="字符串扩展"><a href="#字符串扩展" class="headerlink" title="字符串扩展"></a>字符串扩展</h2><ol>
 <li><strong>几个新的API</strong></li>
 </ol>
 <h4 id="ES6-为字符串扩展了几个新的API："><a href="#ES6-为字符串扩展了几个新的API：" class="headerlink" title="ES6 为字符串扩展了几个新的API："></a>ES6 为字符串扩展了几个新的API：</h4><ul>
@@ -381,7 +381,7 @@
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 3、字符串中调用函数</span><br><span class="line">function fun() &#123;</span><br><span class="line">return &quot;这是一个函数&quot;</span><br><span class="line">&#125;</span><br><span class="line">let sss &#x3D; &#96;O(∩_∩)O 哈哈~，$&#123;fun()&#125;&#96;;</span><br><span class="line">console.log</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-函数优化"><a href="#4-函数优化" class="headerlink" title="4.函数优化"></a>4.函数优化</h2><ol>
+<h2 id="函数优化"><a href="#函数优化" class="headerlink" title="函数优化"></a>函数优化</h2><ol>
 <li><p><strong>函数参数默认值</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;现在可以这么写：直接给参数写上默认值，没传就会自动使用默认值</span><br><span class="line">function add2(a , b &#x3D; 1) &#123;</span><br><span class="line">return a + b;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 传一个参数</span><br><span class="line">console.log(add2(10));</span><br></pre></td></tr></table></figure>
 </li>
@@ -427,18 +427,18 @@
 
 </li>
 </ol>
-<h2 id="5-map-和reduce"><a href="#5-map-和reduce" class="headerlink" title="5.map 和reduce"></a>5.map 和reduce</h2><p>map()：接收一个函数，将原数组中的所有元素用这个函数处理后放入新数组返回。</p>
+<h2 id="map-和reduce"><a href="#map-和reduce" class="headerlink" title="map 和reduce"></a>map 和reduce</h2><p>map()：接收一个函数，将原数组中的所有元素用这个函数处理后放入新数组返回。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr &#x3D; [&#39;1&#39;, &#39;20&#39;, &#39;-5&#39;, &#39;3&#39;];</span><br><span class="line">console.log(arr)</span><br><span class="line">arr &#x3D; arr.map(s &#x3D;&gt; parseInt(s));</span><br><span class="line">console.log(arr)</span><br></pre></td></tr></table></figure>
 
 <p>语法：<br>arr.reduce(callback,[initialValue])<br>reduce 为数组中的每一个元素依次执行回调函数，不包括数组中被删除或从未被赋值的元<br>素，接受四个参数：初始值（或者上一次回调函数的返回值），当前元素值，当前索引，调<br>用reduce 的数组。<br>callback （执行数组中每个值的函数，包含四个参数）<br>1、previousValue （上一次调用回调返回的值，或者是提供的初始值（initialValue））<br>2、currentValue （数组中当前被处理的元素）<br>3、index （当前元素在数组中的索引）<br>4、array （调用reduce 的数组）<br>initialValue （作为第一次调用callback 的第一个参数。）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const arr &#x3D; [1,20,-5,3];</span><br><span class="line">&#x2F;&#x2F;没有初始值：</span><br><span class="line">console.log(arr.reduce((a,b)&#x3D;&gt;a+b));&#x2F;&#x2F;19</span><br><span class="line">console.log(arr.reduce((a,b)&#x3D;&gt;a*b));&#x2F;&#x2F;-300</span><br><span class="line">&#x2F;&#x2F;指定初始值：</span><br><span class="line">console.log(arr.reduce((a,b)&#x3D;&gt;a+b,1));&#x2F;&#x2F;20</span><br><span class="line">console.log(arr.reduce((a,b)&#x3D;&gt;a*b,0));&#x2F;&#x2F;-0</span><br></pre></td></tr></table></figure>
 
-<h2 id="6-Promise"><a href="#6-Promise" class="headerlink" title="6.Promise"></a>6.Promise</h2><p>在JavaScript 的世界中，所有代码都是单线程执行的。由于这个“缺陷”，导致JavaScript 的所有网络操作，浏览器事件，都必须是异步执行。异步执行可以用回调函数实现。一旦有一连串的ajax 请求a,b,c,d… 后面的请求依赖前面的请求结果，就需要层层嵌套。这种缩进和层层嵌套的方式，非常容易造成上下文代码混乱，我们不得不非常小心翼翼处理内层函数与外层函数的数据，一旦内层函数使用了上层函数的变量，这种混乱程度就会加剧……总之，这种<code>层叠上下文</code>的层层嵌套式，着实增加了神经的紧张程度。</p>
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><p>在JavaScript 的世界中，所有代码都是单线程执行的。由于这个“缺陷”，导致JavaScript 的所有网络操作，浏览器事件，都必须是异步执行。异步执行可以用回调函数实现。一旦有一连串的ajax 请求a,b,c,d… 后面的请求依赖前面的请求结果，就需要层层嵌套。这种缩进和层层嵌套的方式，非常容易造成上下文代码混乱，我们不得不非常小心翼翼处理内层函数与外层函数的数据，一旦内层函数使用了上层函数的变量，这种混乱程度就会加剧……总之，这种<code>层叠上下文</code>的层层嵌套式，着实增加了神经的紧张程度。</p>
 <p>通常在企业开发中，会把promise 封装成通用方法，如下：封装了一个通用的get 请求方法；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">let get &#x3D; function (url, data) &#123; &#x2F;&#x2F; 实际开发中会单独放到common.js 中</span><br><span class="line">	return new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">		$.ajax(&#123;</span><br><span class="line">			url: url,</span><br><span class="line">			type: &quot;GET&quot;,</span><br><span class="line">			data: data,</span><br><span class="line">			success(result) &#123;</span><br><span class="line">				resolve(result);</span><br><span class="line">			&#125;,</span><br><span class="line">			error(error) &#123;</span><br><span class="line">				reject(error);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 使用封装的get 方法，实现查询分数</span><br><span class="line">get(&quot;mock&#x2F;user.json&quot;).then((result) &#x3D;&gt; &#123;</span><br><span class="line">console.log(&quot;查询用户：&quot;, result);</span><br><span class="line">return get(&#96;mock&#x2F;user_corse_$&#123;result.id&#125;.json&#96;);</span><br><span class="line">&#125;).then((result) &#x3D;&gt; &#123;</span><br><span class="line">console.log(&quot;查询到课程：&quot;, result);</span><br><span class="line">return get(&#96;mock&#x2F;corse_score_$&#123;result.id&#125;.json&#96;)</span><br><span class="line">&#125;).then((result) &#x3D;&gt; &#123;</span><br><span class="line">console.log(&quot;查询到分数：&quot;, result);</span><br><span class="line">&#125;).catch(() &#x3D;&gt; &#123;</span><br><span class="line">console.log(&quot;出现异常了：&quot; + error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>通过比较，我们知道了Promise 的扁平化设计理念，也领略了这种<code>上层设计</code>带来的好处。我们的项目中会使用到这种异步处理的方式；</p>
-<h2 id="7-模块化"><a href="#7-模块化" class="headerlink" title="7.模块化"></a>7.模块化</h2><p>模块化就是把代码进行拆分，方便重复利用。类似java 中的导包：要使用一个包，必须先导包。而JS 中没有包的概念，换来的是模块。<br>模块功能主要由两个命令构成：<code>export</code>和<code>import</code>。<br>. <code>export</code>命令用于规定模块的对外接口。<br>. <code>import</code>命令用于导入其他模块提供的功能。</p>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p>模块化就是把代码进行拆分，方便重复利用。类似java 中的导包：要使用一个包，必须先导包。而JS 中没有包的概念，换来的是模块。<br>模块功能主要由两个命令构成：<code>export</code>和<code>import</code>。<br>. <code>export</code>命令用于规定模块的对外接口。<br>. <code>import</code>命令用于导入其他模块提供的功能。</p>
 <ol>
 <li><p><strong>export</strong></p>
 <p>比如我定义一个js 文件:hello.js，里面有一个对象</p>

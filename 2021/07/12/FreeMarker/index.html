@@ -24,19 +24,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="FreeMarker1.相关概念1）FreeMarkerFreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。 模板编写为FreeMarker Template Language (FTL)。它是简单的，专用的语言，">
+  <meta name="description" content="FreeMarker相关概念FreeMarkerFreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。 模板编写为FreeMarker Template Language (FTL)。它是简单的，专用的语言， 不是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FreeMarker">
 <meta property="og:url" content="http://example.com/2021/07/12/FreeMarker/index.html">
 <meta property="og:site_name" content="Cai">
-<meta property="og:description" content="FreeMarker1.相关概念1）FreeMarkerFreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。 模板编写为FreeMarker Template Language (FTL)。它是简单的，专用的语言，">
+<meta property="og:description" content="FreeMarker相关概念FreeMarkerFreeMarker 是一款 模板引擎： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。 模板编写为FreeMarker Template Language (FTL)。它是简单的，专用的语言， 不是">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://myblob-pics.oss-cn-hangzhou.aliyuncs.com/FreeMarker/overview.png">
 <meta property="og:image" content="https://myblob-pics.oss-cn-hangzhou.aliyuncs.com/FreeMarker/template.png">
 <meta property="og:image" content="https://myblob-pics.oss-cn-hangzhou.aliyuncs.com/FreeMarker/datamodal.png">
 <meta property="og:image" content="https://myblob-pics.oss-cn-hangzhou.aliyuncs.com/FreeMarker/modaltree.png">
 <meta property="article:published_time" content="2021-07-12T03:24:47.000Z">
-<meta property="article:modified_time" content="2021-07-12T08:28:38.157Z">
+<meta property="article:modified_time" content="2021-07-15T02:04:58.376Z">
 <meta property="article:author" content="wotzc">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="前端框架">
@@ -220,7 +220,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#FreeMarker"><span class="nav-number">1.</span> <span class="nav-text">FreeMarker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">1.相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%EF%BC%89FreeMarker"><span class="nav-number">1.1.1.</span> <span class="nav-text">1）FreeMarker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%EF%BC%89%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.1.2.</span> <span class="nav-text">2）模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%EF%BC%89%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.3.</span> <span class="nav-text">3）模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%A8%A1%E6%9D%BF%E4%B8%80%E8%A7%88"><span class="nav-number">1.2.</span> <span class="nav-text">2.模板一览</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-interpolation-%E6%8F%92%E5%80%BC"><span class="nav-number">1.2.1.</span> <span class="nav-text">1) interpolation 插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-FTL%E6%A0%87%E7%AD%BE"><span class="nav-number">1.2.2.</span> <span class="nav-text">2) FTL标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B3%A8%E9%87%8A"><span class="nav-number">1.2.3.</span> <span class="nav-text">3) 注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-if-%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.4.</span> <span class="nav-text">4) if 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%EF%BC%89list-%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.5.</span> <span class="nav-text">5）list 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%EF%BC%89include-%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.6.</span> <span class="nav-text">6）include 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%EF%BC%89%E4%BD%BF%E7%94%A8%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.7.</span> <span class="nav-text">7）使用内建函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%A4%84%E7%90%86%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.8.</span> <span class="nav-text">8) 处理不存在的变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%BF%AB%E9%80%9F%E6%B5%8F%E8%A7%88-%E5%A4%87%E5%BF%98%E5%8D%95"><span class="nav-number">1.3.</span> <span class="nav-text">3.快速浏览(备忘单)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%BD%AC%E4%B9%89"><span class="nav-number">1.4.</span> <span class="nav-text">4.转义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%80%BC%E5%9F%9F"><span class="nav-number">1.5.</span> <span class="nav-text">5.值域</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#FreeMarker"><span class="nav-number">1.</span> <span class="nav-text">FreeMarker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FreeMarker-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">FreeMarker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.1.2.</span> <span class="nav-text">模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.3.</span> <span class="nav-text">模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E4%B8%80%E8%A7%88"><span class="nav-number">1.2.</span> <span class="nav-text">模板一览</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#interpolation-%E6%8F%92%E5%80%BC"><span class="nav-number">1.2.1.</span> <span class="nav-text">interpolation 插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FTL%E6%A0%87%E7%AD%BE"><span class="nav-number">1.2.2.</span> <span class="nav-text">FTL标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">1.2.3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if-%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.4.</span> <span class="nav-text">if 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list-%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.5.</span> <span class="nav-text">list 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#include-%E6%8C%87%E4%BB%A4"><span class="nav-number">1.2.6.</span> <span class="nav-text">include 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.7.</span> <span class="nav-text">使用内建函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.8.</span> <span class="nav-text">处理不存在的变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E6%B5%8F%E8%A7%88-%E5%A4%87%E5%BF%98%E5%8D%95"><span class="nav-number">1.3.</span> <span class="nav-text">快速浏览(备忘单)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89"><span class="nav-number">1.4.</span> <span class="nav-text">转义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%80%BC%E5%9F%9F"><span class="nav-number">1.5.</span> <span class="nav-text">值域</span></a></li></ol></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -313,10 +313,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-07-12 11:24:47 / 修改时间：16:28:38" itemprop="dateCreated datePublished" datetime="2021-07-12T11:24:47+08:00">2021-07-12</time>
+      <time title="创建时间：2021-07-12 11:24:47" itemprop="dateCreated datePublished" datetime="2021-07-12T11:24:47+08:00">2021-07-12</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-07-15 10:04:58" itemprop="dateModified" datetime="2021-07-15T10:04:58+08:00">2021-07-15</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -337,14 +343,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="FreeMarker"><a href="#FreeMarker" class="headerlink" title="FreeMarker"></a>FreeMarker</h1><h2 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1.相关概念"></a>1.相关概念</h2><h3 id="1）FreeMarker"><a href="#1）FreeMarker" class="headerlink" title="1）FreeMarker"></a>1）FreeMarker</h3><p>FreeMarker 是一款 <em>模板引擎</em>： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。</p>
+        <h1 id="FreeMarker"><a href="#FreeMarker" class="headerlink" title="FreeMarker"></a>FreeMarker</h1><h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><h3 id="FreeMarker-1"><a href="#FreeMarker-1" class="headerlink" title="FreeMarker"></a>FreeMarker</h3><p>FreeMarker 是一款 <em>模板引擎</em>： 即一种基于模板和要改变的数据， 并用来生成输出文本(HTML网页，电子邮件，配置文件，源代码等)的通用工具。 它不是面向最终用户的，而是一个Java类库，是一款程序员可以嵌入他们所开发产品的组件。</p>
 <p>模板编写为FreeMarker Template Language (FTL)。它是简单的，专用的语言， <em>不是</em> 像PHP那样成熟的编程语言。 那就意味着要准备数据在真实编程语言中来显示，比如数据库查询和业务运算， 之后模板显示已经准备好的数据。在模板中，你可以专注于如何展现数据， 而在模板之外可以专注于要展示什么数据。</p>
 <img src="https://myblob-pics.oss-cn-hangzhou.aliyuncs.com/FreeMarker/overview.png"  />
 
 <p>这种方式通常被称为 MVC (模型 视图 控制器) 模式，对于动态网页来说，是一种特别流行的模式。 它帮助从开发人员(Java 程序员)中分离出网页设计师(HTML设计师)。设计师无需面对模板中的复杂逻辑， 在没有程序员来修改或重新编译代码时，也可以修改页面的样式。</p>
 <p>而FreeMarker最初的设计，是被用来在MVC模式的Web开发框架中生成HTML页面的，它没有被绑定到 Servlet或HTML或任意Web相关的东西上。它也可以用于非Web应用环境中。</p>
 <p><img src="https://myblob-pics.oss-cn-hangzhou.aliyuncs.com/FreeMarker/template.png"></p>
-<h3 id="2）模板"><a href="#2）模板" class="headerlink" title="2）模板"></a>2）模板</h3><p>假设在一个在线商店的应用系统中需要一个HTML页面，和下面这个页面类似：</p>
+<h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><p>假设在一个在线商店的应用系统中需要一个HTML页面，和下面这个页面类似：</p>
 <p><code>output</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;title&gt;Welcome!&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;h1&gt;Welcome Big Doe!&lt;&#x2F;h1&gt;</span><br><span class="line">  &lt;p&gt;Our latest product:</span><br><span class="line">  &lt;a href&#x3D;&quot;products&#x2F;greenmouse.html&quot;&gt;green mouse&lt;&#x2F;a&gt;!</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 
@@ -354,7 +360,7 @@
 
 <p>模板文件存放在Web服务器上，就像通常存放静态HTML页面那样。当有人来访问这个页面， FreeMarker将会介入执行，然后动态转换模板，用最新的数据内容替换模板中 <code>$&#123;*...*&#125;</code> 的部分， 之后将结果发送到访问者的Web浏览器中。访问者的Web浏览器就会接收到例如第一个HTML示例那样的内容 (也就是没有FreeMarker指令的HTML代码)，访问者也不会察觉到服务器端使用的FreeMarker。 (当然，存储在Web服务器端的模板文件是不会被修改的；替换也仅仅出现在Web服务器的响应中。)</p>
 <p>请注意，模板并没有包含程序逻辑来查找当前的访问者是谁，或者去查询数据库获取最新的产品。 显示的数据是在 FreeMarker 之外准备的，通常是一些 “真正的” 编程语言(比如Java) 所编写的代码。模板作者无需知道这些值是如何计算出的。事实上，这些值的计算方式可以完全被修改， 而模板可以保持不变，而且页面的样式也可以完全被修改而无需改动模板。 当模板作者(设计师)和程序员不是同一人时，显示逻辑和业务逻辑相分离的做法是非常有用的， 即便模板作者和程序员是一个人，这么来做也会帮助管理应用程序的复杂性。 保证模板专注于显示问题(视觉设计，布局和格式化)是高效使用模板引擎的关键。</p>
-<h3 id="3）模型"><a href="#3）模型" class="headerlink" title="3）模型"></a>3）模型</h3><p>为模板准备的数据整体被称作为 <strong>数据模型</strong>。 模板作者要关心的是，数据模型是树形结构(就像硬盘上的文件夹和文件)，在视觉效果上， 数据模型可以是：</p>
+<h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><p>为模板准备的数据整体被称作为 <strong>数据模型</strong>。 模板作者要关心的是，数据模型是树形结构(就像硬盘上的文件夹和文件)，在视觉效果上， 数据模型可以是：</p>
 <p><img src="https://myblob-pics.oss-cn-hangzhou.aliyuncs.com/FreeMarker/datamodal.png"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Note:</span><br><span class="line">上面只是一个形象化显示；数据模型不是文本格式，它来自于Java对象。 对于Java程序员来说，root就像一个有 getUser() 和 getLatestProduct() 方法的Java对象， 也可以有 &quot;user&quot; 和 &quot;latestProducts&quot; 键值的Java Map对象。相似地，latestProduct 就像是有 getUrl() 和 getName() 方法的Java对象。</span><br></pre></td></tr></table></figure>
 
@@ -383,15 +389,15 @@
 <li>序列是存储有序变量的容器。存储的变量可以通过数字索引来检索，索引通常从0开始。</li>
 </ul>
 <hr>
-<h2 id="2-模板一览"><a href="#2-模板一览" class="headerlink" title="2.模板一览"></a>2.模板一览</h2><h3 id="1-interpolation-插值"><a href="#1-interpolation-插值" class="headerlink" title="1) interpolation 插值"></a>1) interpolation 插值</h3><p><code>$&#123;...&#125;</code>： FreeMarker将会输出真实的值来替换大括号内的表达式，这样的表达式被称为 <strong>interpolation</strong>插值</p>
-<h3 id="2-FTL标签"><a href="#2-FTL标签" class="headerlink" title="2) FTL标签"></a>2) FTL标签</h3><ul>
+<h2 id="模板一览"><a href="#模板一览" class="headerlink" title="模板一览"></a>模板一览</h2><h3 id="interpolation-插值"><a href="#interpolation-插值" class="headerlink" title="interpolation 插值"></a>interpolation 插值</h3><p><code>$&#123;...&#125;</code>： FreeMarker将会输出真实的值来替换大括号内的表达式，这样的表达式被称为 <strong>interpolation</strong>插值</p>
+<h3 id="FTL标签"><a href="#FTL标签" class="headerlink" title="FTL标签"></a>FTL标签</h3><ul>
 <li><strong>FTL 标签</strong> (FreeMarker模板的语言标签)： FTL标签和HTML标签有一些相似之处，但是它们是FreeMarker的指令，是不会在输出中打印的。 这些标签的名字以 <code>#</code> 开头。(用户自定义的FTL标签则需要使用 <code>@</code> 来代替 <code>#</code>，但这属于更高级的话题了。</li>
 <li>FTL标签也被称为 <strong>指令</strong>。 这些指令在HTML的标签 (比如： <code>&lt;table&gt;</code> 和 <code>&lt;/table&gt;</code>) 和HTML元素 (比如： <code>table</code> 元素) 中的关系是相同的。(如果现在还没有感觉到它们的不同， 那么把“FTL标签”和“指令”看做是同义词即可。)</li>
 </ul>
-<h3 id="3-注释"><a href="#3-注释" class="headerlink" title="3) 注释"></a>3) 注释</h3><ul>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><ul>
 <li><strong>注释：</strong> 注释和HTML的注释也很相似， 但是它们使用 <code>&lt;#--</code> and <code>--&gt;</code> 来标识。 不像HTML注释那样，FTL注释不会出现在输出中(不出现在访问者的页面中)， 因为 FreeMarker会跳过它们。</li>
 </ul>
-<h3 id="4-if-指令"><a href="#4-if-指令" class="headerlink" title="4) if 指令"></a>4) if 指令</h3><p>使用 <code>if</code> 指令可以有条件地跳过模板的一些片段, 比如，假设在 最初的示例中， 想向你的老板Big Joe特别地问好，可其他人不同：</p>
+<h3 id="if-指令"><a href="#if-指令" class="headerlink" title="if 指令"></a>if 指令</h3><p>使用 <code>if</code> 指令可以有条件地跳过模板的一些片段, 比如，假设在 最初的示例中， 想向你的老板Big Joe特别地问好，可其他人不同：</p>
 <p><code>Template</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;title&gt;Welcome!&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;h1&gt;</span><br><span class="line">    Welcome $&#123;user&#125;&lt;#if user &#x3D;&#x3D; &quot;Big Joe&quot;&gt;, our beloved leader&lt;&#x2F;#if&gt;!</span><br><span class="line">  &lt;&#x2F;h1&gt;</span><br><span class="line">  &lt;p&gt;Our latest product:</span><br><span class="line">  &lt;a href&#x3D;&quot;$&#123;latestProduct.url&#125;&quot;&gt;$&#123;latestProduct.name&#125;&lt;&#x2F;a&gt;!</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 
@@ -400,14 +406,14 @@
 <p>if-else if-else示例</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;#if animals.python.price &lt; animals.elephant.price&gt;</span><br><span class="line">  Pythons are cheaper than elephants today.</span><br><span class="line">&lt;#elseif animals.elephant.price &lt; animals.python.price&gt;</span><br><span class="line">  Elephants are cheaper than pythons today.</span><br><span class="line">&lt;#else&gt;</span><br><span class="line">  Elephants and pythons cost the same today.</span><br><span class="line">&lt;&#x2F;#if&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="5）list-指令"><a href="#5）list-指令" class="headerlink" title="5）list 指令"></a>5）list 指令</h3><p>当需要列表显示内容时，list指令是必须的。</p>
+<h3 id="list-指令"><a href="#list-指令" class="headerlink" title="list 指令"></a>list 指令</h3><p>当需要列表显示内容时，list指令是必须的。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATE</span><br><span class="line">&lt;p&gt;We have these animals:</span><br><span class="line">&lt;table border&#x3D;1&gt;</span><br><span class="line">  &lt;#list animals as animal&gt;</span><br><span class="line">    &lt;tr&gt;&lt;td&gt;$&#123;animal.name&#125;&lt;td&gt;$&#123;animal.price&#125; Euros</span><br><span class="line">  &lt;&#x2F;#list&gt;</span><br><span class="line">&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
 
 <p>那么输出结果将会是这样的：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">OUTPUT</span><br><span class="line">&lt;p&gt;We have these animals:</span><br><span class="line">&lt;table border&#x3D;1&gt;</span><br><span class="line">    &lt;tr&gt;&lt;td&gt;mouse&lt;td&gt;50 Euros</span><br><span class="line">    &lt;tr&gt;&lt;td&gt;elephant&lt;td&gt;5000 Euros</span><br><span class="line">    &lt;tr&gt;&lt;td&gt;python&lt;td&gt;4999 Euros</span><br><span class="line">&lt;&#x2F;table&gt;</span><br></pre></td></tr></table></figure>
 
 <p><code>list</code> 指令的一般格式为： <code>&lt;#list sequence as loopVariable*repeatThis&lt;/#list&gt;</code>。 <code>repeatThis</code> 部分将会在给定的 <code>sequence</code> 遍历时在每一项中重复， 从第一项开始，一个接着一个。在所有的重复中， <code>loopVariable</code> 将持有当前遍历项的值。 这个变量仅存在于 <code>&lt;#list ...&gt;</code> 和 <code>&lt;/#list&gt;</code> 标签内。</p>
-<h3 id="6）include-指令"><a href="#6）include-指令" class="headerlink" title="6）include 指令"></a>6）include 指令</h3><p>使用 <code>include</code> 指令， 我们可以在模板中插入其他文件的内容。</p>
+<h3 id="include-指令"><a href="#include-指令" class="headerlink" title="include 指令"></a>include 指令</h3><p>使用 <code>include</code> 指令， 我们可以在模板中插入其他文件的内容。</p>
 <p>假设要在一些页面中显示版权声明的信息。那么可以创建一个文件来单独包含这些版权声明， 之后在需要它的地方插入即可。比方说，我们可以将版权信息单独存放在页面文件 <code>copyright_footer.html</code> 中：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATE</span><br><span class="line">&lt;hr&gt;</span><br><span class="line">&lt;i&gt;</span><br><span class="line">Copyright (c) 2000 &lt;a href&#x3D;&quot;http:&#x2F;&#x2F;www.acmee.com&quot;&gt;Acmee Inc&lt;&#x2F;a&gt;,</span><br><span class="line">&lt;br&gt;</span><br><span class="line">All Rights Reserved.</span><br><span class="line">&lt;&#x2F;i&gt;</span><br></pre></td></tr></table></figure>
 
@@ -417,7 +423,7 @@
 <p>此时，输出的内容为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">OUTPUT</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;title&gt;Test page&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;h1&gt;Test page&lt;&#x2F;h1&gt;</span><br><span class="line">  &lt;p&gt;Blah blah...</span><br><span class="line">&lt;hr&gt;</span><br><span class="line">&lt;i&gt;</span><br><span class="line">Copyright (c) 2000 &lt;a href&#x3D;&quot;http:&#x2F;&#x2F;www.acmee.com&quot;&gt;Acmee Inc&lt;&#x2F;a&gt;,</span><br><span class="line">&lt;br&gt;</span><br><span class="line">All Rights Reserved.</span><br><span class="line">&lt;&#x2F;i&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="7）使用内建函数"><a href="#7）使用内建函数" class="headerlink" title="7）使用内建函数"></a>7）使用内建函数</h3><p>内建函数很像子变量(如果了解Java术语的话，也可以说像方法)， 它们并不是数据模型中的东西，是 FreeMarker 在数值上添加的。 为了清晰子变量是哪部分，使用 <code>?</code>(问号)代替 <code>.</code>(点)来访问它们。常用内建函数的示例：</p>
+<h3 id="使用内建函数"><a href="#使用内建函数" class="headerlink" title="使用内建函数"></a>使用内建函数</h3><p>内建函数很像子变量(如果了解Java术语的话，也可以说像方法)， 它们并不是数据模型中的东西，是 FreeMarker 在数值上添加的。 为了清晰子变量是哪部分，使用 <code>?</code>(问号)代替 <code>.</code>(点)来访问它们。常用内建函数的示例：</p>
 <ul>
 <li><code>user?html</code> 给出 <code>user</code> 的HTML转义版本， 比如 <code>&amp;</code> 会由 <code>&amp;</code> 来代替。</li>
 <li><code>user?upper_case</code> 给出 <code>user</code> 值的大写版本 (比如 “JOHN DOE” 来替代 “John Doe”)</li>
@@ -440,7 +446,7 @@
 </ul>
 <p>内建函数应用可以链式操作，比如<code>user?upper_case?html</code> 会先转换用户名到大写形式，之后再进行HTML转义。(这就像可以链式使用 <code>.</code>(点)一样)</p>
 <p>可以阅读 <a target="_blank" rel="noopener" href="http://freemarker.foofun.cn/ref_builtins.html">全部内建函数参考</a>。</p>
-<h3 id="8-处理不存在的变量"><a href="#8-处理不存在的变量" class="headerlink" title="8) 处理不存在的变量"></a>8) 处理不存在的变量</h3><p>数据模型中经常会有可选的变量(也就是说有时并不存在)。 除了一些典型的人为原因导致失误外，FreeMarker 绝不能容忍引用不存在的变量， 除非明确地告诉它当变量不存在时如何处理。这里来介绍两种典型的处理方法。</p>
+<h3 id="处理不存在的变量"><a href="#处理不存在的变量" class="headerlink" title="处理不存在的变量"></a>处理不存在的变量</h3><p>数据模型中经常会有可选的变量(也就是说有时并不存在)。 除了一些典型的人为原因导致失误外，FreeMarker 绝不能容忍引用不存在的变量， 除非明确地告诉它当变量不存在时如何处理。这里来介绍两种典型的处理方法。</p>
 <p><em>这部分对程序员而言: 一个不存在的变量和一个是 <code>null</code> 值的变量， 对于FreeMarker来说是一样的，所以这里所指的”丢失”包含这两种情况。</em></p>
 <p>不论在哪里引用变量，都可以指定一个默认值来避免变量丢失这种情况， 通过在变量名后面跟着一个 <code>!</code>(叹号，译者注)和默认值。 就像下面的这个例子，当 <code>user</code> 不存在于数据模型时, 模板将会将 <code>user</code> 的值表示为字符串 <code>&quot;visitor&quot;</code>。(当 <code>user</code> 存在时， 模板就会表现出 <code>$&#123;user&#125;</code> 的值)：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;Welcome $&#123;user!&quot;visitor&quot;&#125;!&lt;&#x2F;h1&gt;</span><br></pre></td></tr></table></figure>
@@ -450,7 +456,7 @@
 
 <p>关于多级访问的变量，比如 <code>animals.python.price</code>， 书写代码：<code>animals.python.price!0</code> 当且仅当 <code>animals.python</code> 永远存在， 而仅仅最后一个子变量 <code>price</code> 可能不存在时是正确的 (这种情况下我们假设价格是 <code>0</code>)。 如果 <code>animals</code> 或 <code>python</code> 不存在， 那么模板处理过程将会以”未定义的变量”错误而停止。为了防止这种情况的发生， 可以如下这样来编写代码 <code>(animals.python.price)!0</code>。 这种情况就是说 <code>animals</code> 或 <code>python</code> 不存在时， 表达式的结果是 <code>0</code>。对于 <code>??</code> 也是同样用来的处理这种逻辑的; 将 <code>animals.python.price??</code> 对比 <code>(animals.python.price)??</code>来看。</p>
 <hr>
-<h2 id="3-快速浏览-备忘单"><a href="#3-快速浏览-备忘单" class="headerlink" title="3.快速浏览(备忘单)"></a>3.快速浏览(备忘单)</h2><p>这里给已经了解 FreeMarker 的人或有经验的程序员的提个醒：</p>
+<h2 id="快速浏览-备忘单"><a href="#快速浏览-备忘单" class="headerlink" title="快速浏览(备忘单)"></a>快速浏览(备忘单)</h2><p>这里给已经了解 FreeMarker 的人或有经验的程序员的提个醒：</p>
 <ul>
 <li><p>直接指定值</p>
 <ul>
@@ -509,7 +515,7 @@
 </ul>
 <p>请参考： <a target="_blank" rel="noopener" href="http://freemarker.foofun.cn/dgui_template_exp.html#dgui_template_exp_precedence">运算符优先级</a></p>
 <hr>
-<h2 id="4-转义"><a href="#4-转义" class="headerlink" title="4.转义"></a>4.转义</h2><table>
+<h2 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h2><table>
 <thead>
 <tr>
 <th align="left">转义序列</th>
@@ -576,7 +582,7 @@
 <p>将会输出：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">OUTPUT</span><br><span class="line">$&#123;foo&#125;</span><br><span class="line">C:\foo\bar</span><br></pre></td></tr></table></figure>
 
-<h2 id="5-值域"><a href="#5-值域" class="headerlink" title="5.值域"></a>5.值域</h2><p>值域也是序列，但它们由指定包含的数字范围所创建， 而不需指定序列中每一项。比如： <code>0..&lt;m</code>，这里假定 <code>m</code> 变量的值是5，那么这个序列就包含 <code>[0, 1, 2, 3, 4]</code>。值域的主要作用有：使用 <code>&lt;#list...&gt;</code> 来迭代一定范围内的数字，序列切分和 字符串切分。</p>
+<h2 id="值域"><a href="#值域" class="headerlink" title="值域"></a>值域</h2><p>值域也是序列，但它们由指定包含的数字范围所创建， 而不需指定序列中每一项。比如： <code>0..&lt;m</code>，这里假定 <code>m</code> 变量的值是5，那么这个序列就包含 <code>[0, 1, 2, 3, 4]</code>。值域的主要作用有：使用 <code>&lt;#list...&gt;</code> 来迭代一定范围内的数字，序列切分和 字符串切分。</p>
 <p>值域表达式的通用形式是( <code>start</code> 和 <code>end</code> 可以是任意的结果为数字表达式)：</p>
 <ul>
 <li><p><code>start..end</code>： 包含结尾的值域。比如 <code>1..4</code> 就是 <code>[1, 2, 3, 4]</code>， 而 <code>4..1</code> 就是 <code>[4, 3, 2, 1]</code>。当心一点， 包含结尾的值域不会是一个空序列，所以 <code>0..length-1</code> 就是 <em>错误的</em>，因为当长度是 <code>0</code> 时， 序列就成了 <code>[0, -1]</code>。</p>
